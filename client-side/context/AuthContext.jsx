@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
         connectSocket(userData);
         toast.success(data.message);
       } else {
-        toast.error("User doesn't exist, SignUp first");
+        toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.response?.data?.message || error.message);
